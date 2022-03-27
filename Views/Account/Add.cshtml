@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Add an account for company";
+}
+
+<div class="container bg-white mt-4 p-5 rounded">
+    <h3>Add new contact</h3>
+    @using (Html.BeginForm("AddSubmit", "Account", FormMethod.Post))
+    {
+        <p class="fw-bold">Name:</p>
+        <input type="text" class="form-control" name="name" id="name" style="margin-bottom: 1rem;" required/>
+        <p class="fw-bold">Email:</p>
+        <input type="text" class="form-control" name="email" id="email" style="margin-bottom: 1rem;" required/>
+        <p class="fw-bold">Password:</p>
+        <input type="password" class="form-control" name="password" id="password" style="margin-bottom: 1rem;" required/>
+        <p class="fw-bold">Confirm password:</p>
+        <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" style="margin-bottom: 1rem;" required/>
+        <p class="text-danger login-form-element" style="width: fit-content;">
+            @Html.Label("", (string)ViewBag.Message)
+        </p>
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+</div>
+

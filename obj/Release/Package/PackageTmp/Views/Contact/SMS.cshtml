@@ -1,0 +1,61 @@
+﻿@using PhoneBook_CloudComputing.Models
+@{
+    ViewBag.Title = "Send an SMS";
+}
+
+<div class="container bg-white mt-4 p-5 rounded">
+    <h3>Send an SMS</h3>
+    <div>
+        @{
+            List<Contact> list = ViewData["Contact"] as List<Contact>;
+            <h3>Contact(s) to be sent</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td class="fw-bold">Name</td>
+                        <td class="fw-bold">Company Name</td>
+                        <td class="fw-bold">Email</td>
+                        <td class="fw-bold">Phone number</td>
+                        <td class="fw-bold">Address</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (Contact item in list)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Name
+                                </td>
+                                <td>
+                                    @item.CompanyName
+                                </td>
+                                <td>
+                                    @item.Email
+                                </td>
+                                <td>
+                                    @item.PhoneNumber
+                                </td>
+                                <td>
+                                    @item.Address
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+    <div>
+        <h3>Your SMS</h3>
+        @using (Html.BeginForm("SMSSubmit", "Contact", FormMethod.Post))
+        {
+            string contacts = ViewData["ContactsStr"].ToString();
+            <label class="fw-bold">Content</label>
+            <input type="text" class="form-control mb-1" id="content" name="content" />
+            <input type="text" id="contacts" name="contacts" value="@contacts" hidden />
+            <button type="submit" class="btn btn-primary">Send</button>
+        }
+    </div>
+</div>
+

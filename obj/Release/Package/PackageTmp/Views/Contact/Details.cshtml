@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Details of contact";
+}
+@using PhoneBook_CloudComputing.Models;
+
+<div class="container bg-white mt-4 p-5 rounded">
+    <h3>Details of contact</h3>
+    @{
+        Contact contact = (Contact)ViewData["Contact"];
+    }
+    <div class="row">
+        <div class="col-6">
+            <p class="fw-bold">Name:</p>
+            <p class="fw-bold">Company name:</p>
+            <p class="fw-bold">Email:</p>
+            <p class="fw-bold">Phone number:</p>
+            <p class="fw-bold">Address:</p>
+        </div>
+        <div class="col-6">
+            <p>@contact.Name</p>
+            <p>@contact.CompanyName</p>
+            <p>@contact.Email</p>
+            <p>@contact.PhoneNumber</p>
+            <p>@contact.Address</p>
+        </div>
+    </div>
+    <div style="width: fit-content; margin: 0 auto;">
+        @Html.ActionLink("Edit", "Edit", "Contact",
+           new
+           {
+               id = contact.Id
+           }, new
+           {
+               @class = "text-white text-decoration-none btn btn-primary btn-center",
+           })
+        @Html.ActionLink("Delete", "Delete", "Contact",
+           new
+           {
+               id = contact.Id
+           }, new
+           {
+               @class = "text-white text-decoration-none btn btn-primary btn-center",
+           })
+    </div>
+</div>
+

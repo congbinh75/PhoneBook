@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="container account-form-container rounded">
+    @using (Html.BeginForm("RegisterSubmit", "Account", FormMethod.Post, new { style = "height:100%;" }))
+    {
+        <div class="row" style="height: 100%;">
+            <div class="login-form col-sm-8 col-md-6 col-lg-4 mt-4 p-5 rounded">
+                <h3 style="width: fit-content;" class="login-form-element text-center">Register new account</h3>
+                <p class="login-form-element" style="text-align:center;">
+                    for your company
+                </p>
+                <input type="text" class="form-control login-form-element" id="inputCompanyName" name="inputCompanyName" placeholder="Your company name" />
+                <input type="text" class="form-control login-form-element" id="inputName" name="inputName" placeholder="Name" />
+                <input type="email" class="form-control login-form-element" id="inputEmail" name="inputEmail" placeholder="Email" />
+                <input type="password" class="form-control login-form-element" id="inputPassword" name="inputPassword" placeholder="Password" />
+                <input type="password" class="form-control login-form-element" id="inputConfirmPassword" name="inputConfirmPassword" placeholder="Confirm password" />
+                <input type="email" class="form-control login-form-element" id="inputContactEmail" name="inputContactEmail" placeholder="Email used for contact" />
+                <input type="text" class="form-control login-form-element" id="inputContactPhone" name="inputContactPhone" placeholder="Phone number used for contact" />
+                <p class="text-danger login-form-element" style="width: fit-content;">
+                    @Html.Label("", (string)ViewBag.Message)
+                </p>
+                <button type="submit" class="btn btn-primary login-form-element" style="width: 100%;">Sign Up</button>
+                <p class="login-form-element" style="text-align:center;">
+                    Already have an account?
+                    @Html.ActionLink("Log In!", "LogIn", "Account")
+                </p>
+            </div>
+        </div>
+    }
+</div>

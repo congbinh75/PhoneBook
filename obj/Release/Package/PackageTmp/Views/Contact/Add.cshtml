@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Add new contact";
+}
+
+<div class="container bg-white mt-4 p-5 rounded">
+    <h3>Add new contact</h3>
+    @using (Html.BeginForm("AddSubmit", "Contact", FormMethod.Post))
+    {
+        <p class="fw-bold">Name:</p>
+        <input type="text" class="form-control" name="name" id="name" style="margin-bottom: 1rem;" />
+        <p class="fw-bold">Company name:</p>
+        <input type="text" class="form-control" name="companyName" id="companyName" style="margin-bottom: 1rem;" />
+        <p class="fw-bold">Email:</p>
+        <input type="text" class="form-control" name="email" id="email" style="margin-bottom: 1rem;" />
+        <p class="fw-bold">Phone number:</p>
+        <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" style="margin-bottom: 1rem;" />
+        <p class="fw-bold">Address:</p>
+        <input type="text" class="form-control" name="address" id="address" style="margin-bottom: 1rem;" />
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+</div>
+

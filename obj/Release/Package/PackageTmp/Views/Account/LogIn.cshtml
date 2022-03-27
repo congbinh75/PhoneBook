@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Log In";
+    @model PhoneBook_CloudComputing.Models.Account
+}
+
+<div class="container account-form-container">
+    @using(Html.BeginForm("LogInSubmit", "Account", FormMethod.Post, new { style = "height:100%;" }))
+    {
+    @Html.AntiForgeryToken()  
+    @Html.ValidationSummary(true)  
+    <div class="row" style="height: 100%;">
+        <div class="login-form col-sm-8 col-md-6 col-lg-4 mt-4 p-5 rounded">
+            <h3 style="width: fit-content;" class="login-form-element text-center">Log In</h3>
+            @Html.TextBoxFor(model => model.Email, new { placeholder = "Email", @class = "form-control login-form-element" })
+            @Html.PasswordFor(model => model.Password, new { placeholder = "Password", @class = "form-control login-form-element" })
+            <p class="text-danger login-form-element" style="width: fit-content;">@ViewBag.Message</p>
+            <button type="submit" class="btn btn-primary login-form-element" style="width: 100%;">Log In</button>
+            <p class="login-form-element" style="text-align:center;">
+                Don't have an account?
+                @Html.ActionLink("Sign Up!", "Register", "Account")
+            </p>
+        </div>
+    </div>
+    }
+</div>
+
+@if(Session["Id"] != null)
+            {
+                <script>
+                    alert("Hello");
+                </script>
+            }

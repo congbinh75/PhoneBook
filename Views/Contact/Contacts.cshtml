@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Your contacts";
+    @model IEnumerable<PhoneBook_CloudComputing.Models.Contact>
+}
+
+<div class="container bg-white mt-4 p-5 rounded">
+    <h3>Your contacts</h3>
+    @using (Html.BeginForm("SendMessage", "Contact", FormMethod.Post))
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td class="fw-bold">Name</td>
+                    <td class="fw-bold">Company Name</td>
+                    <td class="fw-bold">Email</td>
+                    <td class="fw-bold">Phone number</td>
+                    <td class="fw-bold">Address</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="form-check" name="contact" id="contact" value="@item.Id" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CompanyName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Details", "Details", "Contact", new { id = item.Id }, null)
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <div style="width: fit-content; margin: 1rem auto;">
+            <label class="text-danger">@ViewBag.Message</label>
+        </div>
+        <div style="width: fit-content; margin: 0 auto;">
+            @Html.ActionLink("Add new contact", "Add", "Contact",
+                new { @class = "text-white text-decoration-none btn btn-primary btn-center" })
+            <input type="submit" name="action" value="Send email to selected contact(s)" class="btn btn-primary" />
+            <input type="submit" name="action" value="Send SMS to selected contact(s)" class="btn btn-primary" />
+        </div>
+    }
+</div>
+

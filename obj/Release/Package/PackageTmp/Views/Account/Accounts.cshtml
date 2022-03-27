@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Company's accounts";
+    @model IEnumerable<PhoneBook_CloudComputing.Models.Account>
+}
+
+<div class="container bg-white mt-4 p-5 rounded">
+    <h3>Company's accounts</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <td class="fw-bold">Name</td>
+                <td class="fw-bold">Email</td>
+                <td class="fw-bold">Email used for contact</td>
+                <td class="fw-bold">Phone number used for contact</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContactEmail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContactPhoneNumber)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Account", new { id = item.Id }, null)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <div style="width: fit-content; margin: 0 auto;">
+        @if (Int32.Parse(Session["Role"].ToString()) == 0)
+        {
+            @Html.ActionLink("Add new account", "Add", "Account",
+                new { @class = "text-white text-decoration-none btn btn-primary btn-center" })
+        }
+    </div>
+</div>
+
