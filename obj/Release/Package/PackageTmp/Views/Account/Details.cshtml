@@ -10,13 +10,13 @@
         Company com = (Company)ViewData["Company"];
     }
     <div class="row">
-        <div class="col-6 col-lg-3">
+        <div class="col-6">
             <p class="fw-bold">Name:</p>
             <p class="fw-bold">Company name:</p>
             <p class="fw-bold">Email:</p>
             <p class="fw-bold">Role:</p>
         </div>
-        <div class="col-6 col-lg-3">
+        <div class="col-6">
             <p>@acc.Name</p>
             <p>@com.Name</p>
             <p>@acc.Email</p>
@@ -33,22 +33,12 @@
                     break;
             }
         </div>
-        <div class="col-6 col-lg-3">
-            <p class="fw-bold">Email used for contact:</p>
-            <p class="fw-bold">Phone number used for contact:</p>
-        </div>
-        <div class="col-6 col-lg-3">
-            <p>@acc.ContactEmail</p>
-            <p>@acc.ContactPhoneNumber</p>
-        </div>
     </div>
     <div style="width: fit-content; margin: 0 auto;">
         @if (acc.Id == Int32.Parse(Session["Id"].ToString()) || Int32.Parse(Session["Role"].ToString()) == 0)
         {
             @Html.ActionLink("Edit", "Edit", "Account", acc.Id,
                 new { @class = "text-white text-decoration-none btn btn-primary btn-center" })
-            @Html.ActionLink("Edit contact info", "EditContactInfo", "Account", acc.Id,
-               new { @class = "text-white text-decoration-none btn btn-primary btn-center" })
         }
         @if (acc.Id == Int32.Parse(Session["Id"].ToString()))
         {

@@ -24,6 +24,9 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Email)
                         </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Account", new { id = item.Id }, null)
+                        </td>
                     </tr>
                 }
             }

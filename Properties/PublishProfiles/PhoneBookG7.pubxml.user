@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\dangc\Documents\UEH\CloudComputing\PhoneBookPublish</_PublishTargetUrl>
-    <History>True|2022-03-19T09:54:02.7952408Z;</History>
+    <_PublishTargetUrl>D:\UEH\CloudComputing\PhoneBookPublish</_PublishTargetUrl>
+    <History>True|2022-03-28T07:39:59.9146910Z;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -36,10 +36,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/18/2021 03:03:36</publishTime>
     </File>
     <File Include="bin/PhoneBook_CloudComputing.dll">
-      <publishTime>03/19/2022 16:53:58</publishTime>
+      <publishTime>03/28/2022 14:39:56</publishTime>
     </File>
     <File Include="bin/PhoneBook_CloudComputing.pdb">
-      <publishTime>03/19/2022 16:53:58</publishTime>
+      <publishTime>03/28/2022 14:39:56</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/01/2018 20:23:06</publishTime>
@@ -327,7 +327,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/05/2022 10:14:42</publishTime>
     </File>
     <File Include="Models/PhoneBookModel.edmx.diagram">
-      <publishTime>03/16/2022 20:01:14</publishTime>
+      <publishTime>03/24/2022 12:15:34</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>03/05/2022 10:22:10</publishTime>
@@ -399,28 +399,28 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/05/2022 10:15:04</publishTime>
     </File>
     <File Include="Views/Account/Accounts.cshtml">
-      <publishTime>03/14/2022 16:25:28</publishTime>
+      <publishTime>03/28/2022 13:22:19</publishTime>
     </File>
     <File Include="Views/Account/Add.cshtml">
-      <publishTime>03/18/2022 14:25:31</publishTime>
+      <publishTime>03/24/2022 12:20:50</publishTime>
     </File>
     <File Include="Views/Account/ChangePassword.cshtml">
-      <publishTime>03/14/2022 14:44:56</publishTime>
+      <publishTime>03/24/2022 14:46:18</publishTime>
     </File>
     <File Include="Views/Account/Details.cshtml">
-      <publishTime>03/18/2022 14:16:33</publishTime>
+      <publishTime>03/24/2022 14:47:40</publishTime>
     </File>
     <File Include="Views/Account/Edit.cshtml">
-      <publishTime>03/19/2022 09:50:52</publishTime>
+      <publishTime>03/26/2022 19:37:10</publishTime>
     </File>
     <File Include="Views/Account/LogIn.cshtml">
-      <publishTime>03/14/2022 17:00:59</publishTime>
+      <publishTime>03/24/2022 11:25:00</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>03/14/2022 16:45:08</publishTime>
+      <publishTime>03/24/2022 11:37:04</publishTime>
     </File>
     <File Include="Views/Contact/Add.cshtml">
-      <publishTime>03/14/2022 14:45:48</publishTime>
+      <publishTime>03/26/2022 19:15:02</publishTime>
     </File>
     <File Include="Views/Contact/Contacts.cshtml">
       <publishTime>03/19/2022 09:54:59</publishTime>
@@ -429,16 +429,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/19/2022 12:41:18</publishTime>
     </File>
     <File Include="Views/Contact/Edit.cshtml">
-      <publishTime>03/19/2022 12:38:45</publishTime>
+      <publishTime>03/26/2022 19:14:33</publishTime>
     </File>
     <File Include="Views/Contact/Email.cshtml">
-      <publishTime>03/16/2022 20:40:15</publishTime>
+      <publishTime>03/28/2022 13:14:25</publishTime>
     </File>
     <File Include="Views/Contact/EmailReview.cshtml">
       <publishTime>03/18/2022 13:27:17</publishTime>
     </File>
     <File Include="Views/Contact/SMS.cshtml">
-      <publishTime>03/17/2022 13:36:37</publishTime>
+      <publishTime>03/28/2022 13:14:42</publishTime>
     </File>
     <File Include="Views/Contact/SMSReview.cshtml">
       <publishTime>03/19/2022 10:12:54</publishTime>
@@ -459,7 +459,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/05/2022 10:14:42</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/19/2022 16:53:59</publishTime>
+      <publishTime>03/28/2022 14:39:57</publishTime>
     </File>
   </ItemGroup>
 </Project>

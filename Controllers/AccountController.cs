@@ -97,16 +97,16 @@ namespace PhoneBook_CloudComputing.Controllers
             Account acc = (from a in db.Account
                            where a.Email.Equals(email)
                            select a).FirstOrDefault<Account>();
-            if (acc == null)
+            if (acc != null)
             {
-                ViewBag.Message("Email is already registered!");
-                return Redirect("Register");
+                ViewBag.Message ="Email is already registered!";
+                return View("Register");
             }
 
             if(!password.Equals(confirmPassword))
             {
-                ViewBag.Message("Password and confirmation do not match!");
-                return Redirect("Register");
+                ViewBag.Message = "Password and confirmation do not match!";
+                return View("Register");
             }
 
             Company company = new Company();

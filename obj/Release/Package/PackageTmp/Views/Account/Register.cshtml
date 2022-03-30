@@ -12,13 +12,11 @@
                 <p class="login-form-element" style="text-align:center;">
                     for your company
                 </p>
-                <input type="text" class="form-control login-form-element" id="inputCompanyName" name="inputCompanyName" placeholder="Your company name" />
-                <input type="text" class="form-control login-form-element" id="inputName" name="inputName" placeholder="Name" />
-                <input type="email" class="form-control login-form-element" id="inputEmail" name="inputEmail" placeholder="Email" />
-                <input type="password" class="form-control login-form-element" id="inputPassword" name="inputPassword" placeholder="Password" />
-                <input type="password" class="form-control login-form-element" id="inputConfirmPassword" name="inputConfirmPassword" placeholder="Confirm password" />
-                <input type="email" class="form-control login-form-element" id="inputContactEmail" name="inputContactEmail" placeholder="Email used for contact" />
-                <input type="text" class="form-control login-form-element" id="inputContactPhone" name="inputContactPhone" placeholder="Phone number used for contact" />
+                <input type="text" class="form-control login-form-element" id="inputCompanyName" name="inputCompanyName" placeholder="Your company name" required/>
+                <input type="text" class="form-control login-form-element" id="inputName" name="inputName" placeholder="Name" required/>
+                <input type="email" class="form-control login-form-element" id="inputEmail" name="inputEmail" placeholder="Email" required/>
+                <input type="password" class="form-control login-form-element" id="inputPassword" name="inputPassword" placeholder="Password" required/>
+                <input type="password" class="form-control login-form-element" id="inputConfirmPassword" name="inputConfirmPassword" placeholder="Confirm password" required/>
                 <p class="text-danger login-form-element" style="width: fit-content;">
                     @Html.Label("", (string)ViewBag.Message)
                 </p>

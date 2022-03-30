@@ -10,8 +10,6 @@
             <tr>
                 <td class="fw-bold">Name</td>
                 <td class="fw-bold">Email</td>
-                <td class="fw-bold">Email used for contact</td>
-                <td class="fw-bold">Phone number used for contact</td>
                 <td></td>
             </tr>
         </thead>
@@ -25,12 +23,6 @@
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ContactEmail)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ContactPhoneNumber)
                         </td>
                         <td>
                             @Html.ActionLink("Details", "Details", "Account", new { id = item.Id }, null)

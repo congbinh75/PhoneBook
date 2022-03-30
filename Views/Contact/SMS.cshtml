@@ -52,7 +52,7 @@
         {
             string contacts = ViewData["ContactsStr"].ToString();
             <label class="fw-bold">Content</label>
-            <textarea type="text" class="form-control mb-1" id="content" name="content" />
+            <input type="text" class="form-control mb-1" id="content" name="content" />
             <input type="text" id="contacts" name="contacts" value="@contacts" hidden />
             <button type="submit" class="btn btn-primary">Send</button>
         }

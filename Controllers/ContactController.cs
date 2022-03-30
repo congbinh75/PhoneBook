@@ -311,7 +311,7 @@ namespace PhoneBook_CloudComputing.Controllers
 
             string content = Request.Form["content"].ToString();
             string accountSid = "AC289544aa20759b8c919e5f45d1fc6712";
-            string authToken = "7481394cf319130e94988f729482cef8";
+            string authToken = "277a9b2b1f90e692f490561937a206f6";
             TwilioClient.Init(accountSid, authToken);
 
             for (int i = 0; i < selectedContacts.Count; i++)
